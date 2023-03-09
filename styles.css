@@ -1,0 +1,71 @@
+:root {
+    --accent: hsl(172, 67%, 45%);
+    --background-dark: hsl(183, 100%, 15%);
+    --text-dark: hsl(186, 14%, 43%);
+    --background-medium: hsl(184, 14%, 56%);
+    --background-light-200: hsl(185, 41%, 84%);
+    --background-light-100: hsl(0, 0%, 100%);
+    --text-light: hsl(189, 41%, 97%);
+}
+
+/* reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p, 
+section,
+article {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* end reset */
+
+body {
+    font-family: "Space Mono", serif;
+    font-weight: 700;
+}
