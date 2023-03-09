@@ -15,30 +15,42 @@
   </style>
 </head>
 <body>
-
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
+  <header>
+    <h1><img src="./images/logo.svg" alt="splitter logo"></h1>
+  </header>
+  <main>
+    <section class="input">
+      <div class="input-group">
+        <h2>Bill</h2>
+        <input id="bill" type="text" placeholder="0">
+      </div>
+      <div class="input-group">
+        <h2>Select Tip %</h2>
+        <button>5%</button>
+        <button>10%</button>
+        <button>15%</button>
+        <button>25%</button>
+        <button>50%</button>
+        <input id="custom-amount" type="text" placeholder="Custom">
+      </div>
+      <div class="input-group">
+        <h2>Number of People</h2>
+        <input id="num-people" type="text" placeholder="0">
+      </div>
+    </section>
+    <section class="output">
+      <div class="output-group">
+        <h2><span>Tip Amount</span>/ person</h2>
+        <p id="tip-amount" class="split-amount">$0.00</p>
+        <h2><span>Total</span>/ person</h2>
+        <p id="total-amount" class="split-amount">$0.00</p>
+      </div>
+      <button>Reset</button>
+    </section>
+  </main>
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    Coded by <a href="#">MooseCowBear</a>.
+  </footer>
 </body>
 </html>
