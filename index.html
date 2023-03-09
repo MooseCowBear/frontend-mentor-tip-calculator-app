@@ -24,28 +24,34 @@
     <section class="input">
       <div class="input-group">
         <h2>Bill</h2>
-        <input id="bill" type="text" placeholder="0">
+        <input class="bill" id="bill" type="text" placeholder="0">
       </div>
-      <div class="input-group">
+      <div class="input-group tip">
         <h2>Select Tip %</h2>
-        <button>5%</button>
-        <button>10%</button>
-        <button>15%</button>
-        <button>25%</button>
-        <button>50%</button>
-        <input id="custom-amount" type="text" placeholder="Custom">
+        <div>
+          <button>5%</button>
+          <button>10%</button>
+          <button>15%</button>
+          <button>25%</button>
+          <button>50%</button>
+        </div>
+        <input class="tip" id="custom-amount" type="text" placeholder="Custom">
       </div>
       <div class="input-group">
         <h2>Number of People</h2>
-        <input id="num-people" type="text" placeholder="0">
+        <input class="num-people" id="num-people" type="text" placeholder="0">
       </div>
     </section>
     <section class="output">
       <div class="output-group">
-        <h2><span>Tip Amount</span>/ person</h2>
-        <p id="tip-amount" class="split-amount">$0.00</p>
-        <h2><span>Total</span>/ person</h2>
-        <p id="total-amount" class="split-amount">$0.00</p>
+        <div class="line">
+          <h2><span>Tip Amount</span>/ person</h2>
+          <p id="tip-calculated" class="split-amount">$0.00</p>
+        </div>
+        <div class="line">
+          <h2><span>Total</span>/ person</h2>
+          <p id="total-calculated" class="split-amount">$0.00</p>
+        </div>
       </div>
       <button>Reset</button>
     </section>
