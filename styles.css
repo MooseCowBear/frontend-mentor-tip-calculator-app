@@ -21,7 +21,8 @@ h2,
 h3,
 p, 
 section,
-article {
+article,
+input {
   margin: 0;
   padding: 0;
 }
@@ -68,4 +69,115 @@ a:not([class]) {
 body {
     font-family: "Space Mono", serif;
     font-weight: 700;
+    font-size: 24px;
+    background-color: var(--background-light-200);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.2em;
+    background-color: white;
+    padding: 1em;
+    border-radius: 1em;
+}
+
+.output {
+    background-color: var(--background-dark);
+    border-radius: 0.5em;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+h2 {
+    font-size: 0.45em;
+    letter-spacing: 1px;
+    color: var(--text-dark);
+}
+
+.tip h2 {
+    margin-bottom: 1em;
+}
+
+.input-group.tip > div{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.3em;
+}
+
+.input-group.tip button {
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    border: transparent;
+    font-size: 0.7em;
+    letter-spacing: 1px;
+    padding: 0.2em 1.4em;
+    border-radius: 0.2em;
+}
+
+input.tip {
+    width: 30%;
+    display: inline;
+    margin-top: 0;
+    float: right;
+    background-color: var(--text-light);
+    border: transparent;
+    color: var(--background-dark);
+    outline: transparent;
+    text-align: center;
+    padding: 0.3em 0;
+    font-size: 0.7em;
+    font-weight: inherit;
+    font-family: inherit;
+    margin-top: -2em;
+}
+input.tip::placeholder {
+    color: var(--text-dark);
+    opacity: 1;
+}
+input.tip::-ms-input-placeholder { /* edge */
+    color: var(--text-dark);
+}
+
+input.bill, input.num-people {
+    width: 100%;
+    font-size: 0.8em;
+    font-weight: inherit;
+    font-family: inherit;
+    padding: 0em 0.8em;
+    background-color: var(--text-light);
+    border: transparent;
+    outline: transparent;
+}
+
+input.bill::placeholder, input.num-people::placeholder {
+    text-align: right;
+    color: var(--text-dark); /* might be hsla */ 
+    opacity: 1;
+}
+
+input.bill::-ms-input-placeholder, input.num-people::-ms-input-placeholder { /* edge */
+    text-align: right;
+    color: var(--text-dark); 
+}
+
+input.bill {
+    background-image: url(./images/icon-dollar.svg);
+    background-repeat: no-repeat;
+    background-position: 5% 50%;
+}
+
+input.num-people {
+    background-image: url(./images/icon-person.svg);
+    background-repeat: no-repeat;
+    background-position: 5% 50%;
 }
