@@ -48,6 +48,7 @@ tipButtonParentDiv.addEventListener("click", (event) => {
         removeClassName("valid", customTip); //and any prev error styling
         removeClassName("invalid", customTip);
 
+        resetButton.classList.add("active"); 
         deselectButtons(); //in case any button was selected previously
         event.target.classList.add("selected");
         tipPercent = parseFloat(event.target.innerText); 
