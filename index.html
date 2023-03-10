@@ -38,18 +38,21 @@
         <input class="tip" id="custom-amount" type="text" placeholder="Custom">
       </div>
       <div class="input-group">
-        <h2>Number of People</h2>
+        <div class="num-people-heading-wrapper">
+          <h2>Number of People</h2> <!-- need warning inline here with div to surround-->
+          <p class="warning">Can't be zero</p>
+        </div>
         <input class="num-people" id="num-people" type="text" placeholder="0">
       </div>
     </section>
     <section class="output">
       <div class="output-group">
         <div class="line">
-          <h2><span>Tip Amount</span>/ person</h2>
+          <h2>Tip Amount<span>/ person</span></h2>
           <p id="tip-calculated" class="split-amount">$0.00</p>
         </div>
         <div class="line">
-          <h2><span>Total</span>/ person</h2>
+          <h2>Total<span>/ person</span></h2>
           <p id="total-calculated" class="split-amount">$0.00</p>
         </div>
       </div>
