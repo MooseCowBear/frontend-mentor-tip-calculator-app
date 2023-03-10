@@ -134,7 +134,7 @@ input.tip {
     background-color: var(--text-light);
     border: transparent;
     outline: transparent;
-    padding: 0.2em 0.5em;
+    padding: 0.25em 0.5em;
     font-size: 0.7em;
     font-weight: inherit;
     font-family: inherit;
@@ -147,6 +147,7 @@ input.tip::placeholder {
     opacity: 1;
     text-align: center;
 }
+
 input.tip::-ms-input-placeholder { /* edge */
     color: var(--text-dark);
     text-align: center;
@@ -270,10 +271,49 @@ input.bill:hover, input.bill:focus {
     cursor: pointer;
 }
 
-input.bill.valid, input.num-people.valid, input.tip { /*temp */
+input.bill.valid, input.num-people.valid, input.tip.valid { /*temp */
     border: 2px solid var(--accent);
 }
 
 input.bill.invalid, input.num-people.invalid {
     border: 2px solid salmon;
+}
+
+/* selected, input entered states */
+section.output > button.active {
+    opacity: 1;
+    background-color: var(--accent);
+}
+
+.input-group.tip button.selected {
+    background-color: var(--accent);
+    color: var(--background-dark);
+}
+
+/* mobile */
+@media only screen and (max-width: 620px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        row-gap: 1em;
+    }
+
+    header {
+        margin-top: 2em;
+    }
+
+    .input-group.tip > div{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.4em;
+    }
+
+    input.tip {
+        width: 49%;
+    }
+    /* need gap between input and output */
+    .output {
+        gap: 1em;
+    }
 }
