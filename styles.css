@@ -219,7 +219,7 @@ p {
     font-size: 0.38em;
 }
 
-button {
+section.output > button {
     border: transparent;
     border-radius: 0.3em;
     background-color: var(--accent);
@@ -227,4 +227,9 @@ button {
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 0.6em;
+    opacity: 0.3; /* when no information added */ 
+}
+
+section.output > button.active { /* add active class when any info is added */
+    opacity: 1;
 }
