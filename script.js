@@ -52,11 +52,8 @@ tipButtonParentDiv.addEventListener("click", (event) => {
         event.target.classList.add("selected");
         tipPercent = parseFloat(event.target.innerText); 
 
-        console.log("tip amount is now: ", tipPercent);
-
         //call getValidationStatus
         const calculate = getValidationStatus();
-        console.log("ready to calc", calculate);
         if (calculate) {
             displayCalculation();
         }
