@@ -106,13 +106,13 @@ h2 {
     margin-bottom: 1em;
 }
 
-.input-group.tip > div{
+.button-wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 0.4em;
 }
 
-.input-group.tip button {
+.tip-button {
     background-color: var(--background-dark);
     color: var(--text-light);
     border: transparent;
@@ -201,6 +201,10 @@ input.num-people {
     display: none;
 }
 
+.warning.on {
+    display: inline;
+}
+
 /* right side */ 
 .output {
     background-color: var(--background-dark);
@@ -238,7 +242,7 @@ p {
     color: var(--text-light);;
 }
 
-section.output button {
+section.output button { /*reset button */
     border: transparent;
     border-radius: 0.3em;
     background-color: var(--accent);
@@ -255,13 +259,13 @@ section.output > button.active { /* add active class when any info is added */
 }
 
 /* active states */ 
-section.output > button:hover,  section.output > button:focus {
+section.output > button.active:hover,  section.output > button.active:focus { /* only when reset button is active do we have hover effect */
     cursor: pointer;
     opacity: 1;
     background-color: hsl(172, 67%, 80%);
 }
 
-.input-group.tip button:hover, .input-group.tip button:focus {
+.tip-button:hover, .tip-button:focus {
     cursor: pointer;
     background-color: hsl(172, 67%, 80%);
     color: var(--background-dark);
@@ -275,7 +279,7 @@ input.bill.valid, input.num-people.valid, input.tip.valid { /*temp */
     border: 2px solid var(--accent);
 }
 
-input.bill.invalid, input.num-people.invalid {
+input.bill.invalid, input.num-people.invalid, input.tip.invalid {
     border: 2px solid salmon;
 }
 
@@ -285,7 +289,7 @@ section.output > button.active {
     background-color: var(--accent);
 }
 
-.input-group.tip button.selected {
+.tip-button.selected {
     background-color: var(--accent);
     color: var(--background-dark);
 }
@@ -303,7 +307,7 @@ section.output > button.active {
         margin-top: 2em;
     }
 
-    .input-group.tip > div{
+    .button-wrapper {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 0.4em;
@@ -312,7 +316,7 @@ section.output > button.active {
     input.tip {
         width: 49%;
     }
-    /* need gap between input and output */
+    /* need gap reset button and output display */
     .output {
         gap: 1em;
     }
